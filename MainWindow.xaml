@@ -8,12 +8,22 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         Title="MainWindow" Height="800" Width="1200">
+    <Window.Background>
+        <ImageBrush ImageSource="/SeaBattleBack.png" Stretch="UniformToFill"/> 
+    </Window.Background>
 
     <Grid MouseDown="Drag" >
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="113*"/>
+            <RowDefinition Height="19*"/>
         </Grid.RowDefinitions>
-        <Rectangle HorizontalAlignment="Center" Height="30" Grid.Row="0" Grid.Column="0" Fill="AntiqueWhite" VerticalAlignment="Top" Width="1200"/>
-        <Button HorizontalAlignment="Right" Width="30px" Style="{StaticResource CloseButton}" Cursor="Hand" Click="CloseButtonClick">X</Button>
+
+        <Label Content="Морской бой" HorizontalAlignment="Center" VerticalAlignment="Top" Panel.ZIndex="1" Grid.Row="1" Grid.Column="0" Height="100" Style="{StaticResource HeaderText}"/>
+        <Rectangle HorizontalAlignment="Center" Height="30" Fill="AntiqueWhite" VerticalAlignment="Center" Width="1200"/>
+        <Button HorizontalAlignment="Left" Width="30px" Style="{StaticResource CloseButton}" Cursor="Hand" Click="CloseButtonClick" Margin="1170,0,0,0">X</Button>
     </Grid>
+
+
 </Window>

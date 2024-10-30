@@ -8,4 +8,10 @@
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="Cursor" Value="Hand"/>
     </Style>
+
+    <Style x:Key="HeaderText" TargetType="Label">
+        <Setter Property="FontSize" Value="65px"/>
+        <Setter Property="FontFamily" Value="Segoe UI Black"/>
+        
+    </Style>
 </ResourceDictionary>
