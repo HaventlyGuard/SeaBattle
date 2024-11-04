@@ -9,7 +9,7 @@
         ResizeMode="NoResize"
         Title="MainWindow" Height="800" Width="1200">
     <Window.Background>
-        <ImageBrush ImageSource="/SeaBattleBack.png" Stretch="UniformToFill"/> 
+        <ImageBrush ImageSource="/SeaBattleBack.png" Stretch="UniformToFill"/>
     </Window.Background>
 
     <Grid MouseDown="Drag" >
@@ -20,9 +20,12 @@
             <RowDefinition Height="19*"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Морской бой" HorizontalAlignment="Center" VerticalAlignment="Top" Panel.ZIndex="1" Grid.Row="1" Grid.Column="0" Height="100" Style="{StaticResource HeaderText}"/>
+        <Label Content="Морской бой" HorizontalAlignment="Center" VerticalAlignment="Top" Panel.ZIndex="1" Grid.Row="1" Height="100" Style="{StaticResource HeaderText}" Margin="0,55,0,0" Grid.RowSpan="2"/>
         <Rectangle HorizontalAlignment="Center" Height="30" Fill="AntiqueWhite" VerticalAlignment="Center" Width="1200"/>
-        <Button HorizontalAlignment="Left" Width="30px" Style="{StaticResource CloseButton}" Cursor="Hand" Click="CloseButtonClick" Margin="1170,0,0,0">X</Button>
+        <Button HorizontalAlignment="Left" Width="30px" Style="{StaticResource CloseButton}" Cursor="Hand" Click="CloseButtonClick" Margin="1170,0,0,0" Foreground="Black">X</Button>
+        <Button Content="Игра на одном компьютере" HorizontalAlignment="Center" Margin="0,150,0,0" Grid.Row="2" VerticalAlignment="Top" Height="85" Width="890" Style="{StaticResource MainMenuButtons}"/>
+        <Button Content="Игра по сети"  Grid.Row="2" Style="{StaticResource MainMenuButtons}" Margin="155,260,155,220" IsEnabled="False"/>
+        <Button Content="Выход"  Grid.Row="2" Style="{StaticResource MainMenuButtons}" Margin="155,375,155,105" Click="CloseButtonClick"/>
     </Grid>
 
 
