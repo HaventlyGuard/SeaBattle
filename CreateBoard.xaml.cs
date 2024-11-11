@@ -1,5 +1,8 @@
-﻿using System.Reflection.Metadata;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -7,24 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SeaBattle
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Логика взаимодействия для CreateBoard.xaml
+    /// </summary>
+   
+    public partial class CreateBoard : Window
     {
-        public static MainWindow Window;
-        public static CreateBoard createBoard;
-        public MainWindow()
+        public static CreateBoard Window;
+        public CreateBoard()
         {
             InitializeComponent();
             Window = this;
         }
-
         private void Drag(object sender, MouseButtonEventArgs e)
         {
-            if(Mouse.LeftButton == MouseButtonState.Pressed)
+            if (Mouse.LeftButton == MouseButtonState.Pressed)
             {
                 MainWindow.Window.DragMove();
             }
@@ -33,14 +37,6 @@ namespace SeaBattle
         private void CloseButtonClick(object sender, RoutedEventArgs e)
         {
             Window.Close();
-        }
-
-        private void PlayOneDevice_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow.Window.Hide();
-            CreateBoard createBoard = new CreateBoard();
-            createBoard.Show();
-            MainWindow.Window.Close();
         }
     }
 }

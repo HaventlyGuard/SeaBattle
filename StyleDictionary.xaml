@@ -53,4 +53,10 @@
         </Setter>
 
     </Style>
+
+    <Style x:Key="CellStyle" TargetType="Rectangle">
+        <Setter Property="Fill" Value="White"/>
+        <Setter Property="Stroke" Value="Black"/>
+        <Setter Property="StrokeThickness" Value="2"/>
+    </Style>
 </ResourceDictionary>
