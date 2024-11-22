@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SeaBattle
 {
-    public class Ship : IShip
+    internal interface IShip
     {
         public int Size { get; set; }
-        public bool IsHorizontal { get; set ; }
+        public bool IsHorizontal { get; set; }
     }
 }
