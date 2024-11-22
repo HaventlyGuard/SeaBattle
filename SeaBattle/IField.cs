@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SeaBattle
 {
-    public class Field
+    internal interface IField
     {
+        public List<List<Cell>> GameField { get; set; }
 
     }
 }
