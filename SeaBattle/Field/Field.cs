@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SeaBattle.Field.Field
 {
-    public class Field
+    public class Field : IField
     {
 
     }

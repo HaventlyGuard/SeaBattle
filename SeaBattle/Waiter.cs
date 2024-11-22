@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace SeaBattle
 {
-    public class Waiter
+    public class Waiter : IWaiter
     {
         public void WaitForNextStep()
         {
+            Console.WriteLine("Вы готовы продолжить?");
+            // и тд.
         }
     }
 }

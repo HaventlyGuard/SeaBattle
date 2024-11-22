@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace SeaBattle
 {
-    public class Cell : ICell
+    internal interface IWaiter
     {
-        public bool Fullness { get; set; }
-        public bool IsShipHere()
-        {
-            return false;
-        }
+        public void WaitForNextStep();
     }
 }
