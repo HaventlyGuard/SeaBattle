@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeaBattle
+namespace SeaBattle.Field.Field
 {
     internal interface IFieldChecker : IField
     {

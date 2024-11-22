@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeaBattle
+namespace SeaBattle.Field.Field
 {
     internal class FieldChecker : IFieldChecker
     {
@@ -23,7 +23,7 @@ namespace SeaBattle
             //      for (int i = ...; i < ... ; i++){
             //          check
             // 
-            
+
             //ЛИБО Спиралькой
 
             //while (l <= r && t <= b)
