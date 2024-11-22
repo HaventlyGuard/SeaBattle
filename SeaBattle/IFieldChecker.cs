@@ -8,7 +8,7 @@ namespace SeaBattle
 {
     internal interface IFieldChecker : IField
     {
-        public bool IsFieldFilledProperly();
-        public bool CheckFieldForMiss();
+        public bool IsFieldFilledProperly(Ship ship);
+        public bool CheckFieldForMiss(int x, int y);
     }
 }

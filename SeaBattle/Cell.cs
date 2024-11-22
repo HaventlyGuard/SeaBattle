@@ -8,7 +8,6 @@ namespace SeaBattle
 {
     public class Cell
     {
-        public Ship? ship { get; set; }
         public bool Fullness { get; set; }
         public bool IsShipHere()
         {

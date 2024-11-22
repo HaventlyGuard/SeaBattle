@@ -8,8 +8,9 @@ namespace SeaBattle
 {
     internal class Player
     {
+        public int Id { get; set; }
+        public int id;
         public List<Ship> Ships;
-
         public List<List<Cell>> FillField(List<List<Cell>> field) 
         {
             return field;

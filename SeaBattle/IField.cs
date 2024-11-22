@@ -8,7 +8,6 @@ namespace SeaBattle
 {
     internal interface IField
     {
-        public List<List<Cell>> GameField { get; set; }
-
+        public static Dictionary<int, List<List<Cell>>> GameField { get; set;}
     }
 }

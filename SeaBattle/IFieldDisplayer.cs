@@ -8,7 +8,7 @@ namespace SeaBattle
 {
     internal interface IFieldDisplayer : IField
     {
-        public void ShowField();
+        public void ShowField(int index);
         public void HideField();
     }
 }
