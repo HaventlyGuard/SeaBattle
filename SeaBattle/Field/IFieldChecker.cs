@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SeaBattle.Field.Field
 {
-    internal interface IFieldChecker : IField
+    internal interface IFieldChecker
     {
-        public bool IsFieldFilledProperly(Ship ship);
+        public bool IsFieldFilledProperly(IShip ship);
         public bool CheckFieldForMiss(int x, int y);
     }
 }

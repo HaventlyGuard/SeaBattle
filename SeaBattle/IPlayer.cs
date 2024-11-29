@@ -9,14 +9,8 @@ namespace SeaBattle
     internal interface IPlayer
     {
         public int Id { get; set; }
-        public List<Ship> Ships { get; set; }
-        public List<List<Cell>> FillField(List<List<Cell>> field)
-        {
-            return field;
-        }
-        public List<List<Cell>> AttackOpponent(List<List<Cell>> field)
-        {
-            return field;
-        }
+        public IEnumerable<IShip> Ships { get; set; }
+        public IEnumerable<IEnumerable<ICell>> FillField(List<IEnumerable<ICell>> field);
+        public IEnumerable<IEnumerable<ICell>> AttackOpponent(IEnumerable<IEnumerable<ICell>> field);
     }
 }

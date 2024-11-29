@@ -8,14 +8,15 @@ namespace SeaBattle
 {
     internal class Player : IPlayer
     {
-        int IPlayer.Id { get; set; }
-        List<Ship> IPlayer.Ships { get; set; }
+        public int Id { get; set; }
+        public IEnumerable<IShip> Ships { get ; set; }
 
-        public List<List<Cell>> FillField(List<List<Cell>> field) 
+        public IEnumerable<IEnumerable<ICell>> AttackOpponent(IEnumerable<IEnumerable<ICell>> field)
         {
             return field;
         }
-        public List<List<Cell>> AttackOpponent(List<List<Cell>> field)
+
+        public IEnumerable<IEnumerable<ICell>> FillField(List<IEnumerable<ICell>> field)
         {
             return field;
         }

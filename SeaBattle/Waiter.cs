@@ -11,7 +11,7 @@ namespace SeaBattle
         public void WaitForNextStep()
         {
             Console.WriteLine("Вы готовы продолжить?");
-            // и тд.
+            // хуй жоры .!. () 
         }
     }
 }

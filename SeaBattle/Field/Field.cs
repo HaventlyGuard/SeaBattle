@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SeaBattle.Field.Field
 {
-    public class Field : IField
+    public class Field 
     {
-
+        public static Dictionary<int, List<List<Cell>>> GameField { get; set; }
     }
 }
