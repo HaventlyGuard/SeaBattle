@@ -21,7 +21,7 @@ namespace SeaBattle
 
         public override string ToString()
         {
-            return Fullness ? "X" : "O";
+            return Fullness ? "🎁" : "O";
         }
     }
 }
