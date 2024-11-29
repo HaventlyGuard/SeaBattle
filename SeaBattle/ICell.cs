@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SeaBattle
 {
-    internal interface ICell
+    public interface ICell
     {
         public bool Fullness { get; set; }
         public bool IsShipHere();

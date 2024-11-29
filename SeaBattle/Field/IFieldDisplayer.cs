@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SeaBattle.Field.Field
 {
-    internal interface IFieldDisplayer
+    public interface IFieldDisplayer
     {
-        public void ShowField(int index);
+        public void ShowField(IPlayer player);
         public void HideField();
     }
 }

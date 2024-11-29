@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SeaBattle.Field.Field
 {
-    internal class FieldChecker : IFieldChecker
+    
+    public class FieldChecker : IFieldChecker
     {
         public bool CheckFieldForMiss(int x, int y)
         {
@@ -15,8 +16,9 @@ namespace SeaBattle.Field.Field
             throw new NotImplementedException();
         }
 
-        public bool IsFieldFilledProperly(Ship ship)
+        public bool IsFieldFilledProperly(IShip ship)
         {
+            ship.ShipHead.IsSamePoint(new Point());
             // if(ship.IsHorizontal == true)
             //      for (int i = ...; i < ... ; i++){
             // else
@@ -56,8 +58,9 @@ namespace SeaBattle.Field.Field
             //        //и надо смотреть зависимость от того где голова корабля и сам размер коробля
             //    }
             //}
-            throw new NotImplementedException();
+            return false;
         }
+
         //private bool CheckNeighborsCells(int x, int y, int delta1, int delta2)
         //{
         //    return false;

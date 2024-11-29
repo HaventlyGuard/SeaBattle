@@ -1,13 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SeaBattle.Field.Field
+﻿namespace SeaBattle.Field.Field
 {
-    public class Field 
+    public class Field : IField
     {
-        public static Dictionary<int, List<List<Cell>>> GameField { get; set; }
+        public static Dictionary<IPlayer?, List<List<ICell>>> GameField { get; set; }
+
+        static Field()
+        {
+            GameField = [];
+            AddNewFieldTenOnTen(new Player());
+        }
+        public Field()
+        {
+
+        }
+        public static void AddNewFieldTenOnTen(IPlayer? player)
+        {
+            GameField[player] =
+                Enumerable.Repeat(new List<ICell>(Enumerable.Repeat(new Cell(), 10)), 10).ToList();
+        }
     }
 }

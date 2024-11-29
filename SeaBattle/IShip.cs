@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SeaBattle
 {
-    internal interface IShip
+    public interface IShip
     {
+        public Point ShipHead { get; set; }
         public int Size { get; set; }
         public bool IsHorizontal { get; set; }
     }

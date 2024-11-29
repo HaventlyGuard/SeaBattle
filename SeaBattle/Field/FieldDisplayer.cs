@@ -1,17 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SeaBattle.Field.Field
+﻿namespace SeaBattle.Field.Field
 {
-    internal class FieldDisplayer : IFieldDisplayer
+    public class FieldDisplayer : IFieldDisplayer
     {
-        public void ShowField(int index)
+        public void ShowField(IPlayer player)
         {
-            //берем с словаря по индексу значение и выводим этот лист листов обычным циклом
-            throw new NotImplementedException();
+            foreach (var row in Field.GameField[player])
+            {
+                foreach (var column in row)
+                {
+                    Console.Write(column + " ");
+                }
+                Console.WriteLine();
+            }
+
         }
         public void HideField()
         {

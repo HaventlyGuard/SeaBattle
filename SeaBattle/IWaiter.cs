@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SeaBattle
 {
-    internal interface IWaiter
+    public interface IWaiter
     {
         public void WaitForNextStep();
     }

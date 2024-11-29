@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SeaBattle
 {
-    internal interface IPlayer
+    public interface IPlayer
     {
         public int Id { get; set; }
         public IEnumerable<IShip> Ships { get; set; }
