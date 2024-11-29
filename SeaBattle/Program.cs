@@ -10,9 +10,8 @@ namespace SeaBattle
             var a = 0;
             var av = new Player(3);
             Field.Field.Field.AddNewFieldTenOnTen(av);
-
-            var displayer = new FieldDisplayer();
-            displayer.ShowField(av);
+            av.FillField(Field.Field.Field.GameField[av]);
+            Field.Field.FieldDisplayer.ShowField(av);
         }
     }
 }

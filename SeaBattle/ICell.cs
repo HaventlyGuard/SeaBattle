@@ -9,6 +9,8 @@ namespace SeaBattle
     public interface ICell
     {
         public bool Fullness { get; set; }
-        public bool IsShipHere();
+        public void PlaceShipToCell();
+        public void TakeShipFromCell();
+
     }
 }

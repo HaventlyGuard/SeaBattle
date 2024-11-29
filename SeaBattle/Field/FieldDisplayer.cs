@@ -2,8 +2,9 @@
 {
     public class FieldDisplayer : IFieldDisplayer
     {
-        public void ShowField(IPlayer player)
+        public static void ShowField(IPlayer player)
         {
+            Console.Clear();
             foreach (var row in Field.GameField[player])
             {
                 foreach (var column in row)
@@ -12,7 +13,6 @@
                 }
                 Console.WriteLine();
             }
-
         }
         public void HideField()
         {

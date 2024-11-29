@@ -3,7 +3,7 @@
     public class Field : IField
     {
         public static Dictionary<IPlayer?, List<List<ICell>>> GameField { get; set; }
-
+        public static int Size = 10;
         static Field()
         {
             GameField = [];
@@ -15,8 +15,10 @@
         }
         public static void AddNewFieldTenOnTen(IPlayer? player)
         {
-            GameField[player] =
-                Enumerable.Repeat(new List<ICell>(Enumerable.Repeat(new Cell(), 10)), 10).ToList();
+            GameField[player] = Enumerable.
+                Range(0, 10).
+                Select(_ => Enumerable.Range(0, 10).Select(_ => (ICell)new Cell()).ToList()).
+                ToList();
         }
     }
 }

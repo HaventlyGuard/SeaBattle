@@ -9,13 +9,19 @@ namespace SeaBattle
     public class Cell : ICell
     {
         public bool Fullness { get; set; }
-        public bool IsShipHere()
+        public void PlaceShipToCell()
         {
-            return false;
+            Fullness = true;
         }
+        public void TakeShipFromCell()
+        {
+            Fullness = false;
+        }
+
+
         public override string ToString()
         {
-            return Fullness ? "O" : "X";
+            return Fullness ? "X" : "O";
         }
     }
 }

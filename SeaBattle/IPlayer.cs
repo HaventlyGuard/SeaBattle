@@ -10,7 +10,7 @@ namespace SeaBattle
     {
         public int Id { get; set; }
         public IEnumerable<IShip> Ships { get; set; }
-        public IEnumerable<IEnumerable<ICell>> FillField(List<IEnumerable<ICell>> field);
+        public IEnumerable<IEnumerable<ICell>> FillField(IEnumerable<IEnumerable<ICell>> field);
         public IEnumerable<IEnumerable<ICell>> AttackOpponent(IEnumerable<IEnumerable<ICell>> field);
     }
 }
