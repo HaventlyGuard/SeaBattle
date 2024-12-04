@@ -2,7 +2,7 @@
 {
     public interface IField
     {
-        public static virtual void AddNewFieldTenOnTen(IPlayer player) { }
+        public static void AddNewFieldTenOnTen(IPlayer player) { }
 
     }
 }

@@ -8,7 +8,7 @@ namespace SeaBattle
         {
             Console.WriteLine("Hello, World!");
             var a = 0;
-            var av = new Player(3);
+            var av = new Player();
             Field.Field.Field.AddNewFieldTenOnTen(av);
             av.FillField(Field.Field.Field.GameField[av]);
             Field.Field.FieldDisplayer.ShowField(av);

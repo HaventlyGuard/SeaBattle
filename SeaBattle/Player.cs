@@ -1,32 +1,40 @@
-﻿namespace SeaBattle
+﻿using System.Xml;
+
+namespace SeaBattle
 {
     public class Player : IPlayer
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public IEnumerable<IShip> Ships { get; set; }
 
-        public Player() : this(0) { }
-        public Player(int Id)
+        public Player()
         {
-            this.Id = Id;
+            this.Id = Guid.NewGuid();
             Ships = GetShips();
         }
         public IEnumerable<IEnumerable<ICell>> AttackOpponent(IEnumerable<IEnumerable<ICell>> field)
         {
             return field;
         }
-
+        
 
         public IEnumerable<IEnumerable<ICell>> FillField(IEnumerable<IEnumerable<ICell>> field)
         {
-            var enumeratorForShips = Ships.GetEnumerator();
-            while (enumeratorForShips.MoveNext())
-            {
-                MoveShips(enumeratorForShips.Current);
+            foreach(var ship in Ships) {
+                MoveShipsByCord(ship);
+                //MoveShips(ship);
                 //Console.WriteLine(Console.ReadKey());
 
             }
             return field;
+        }
+        private void MoveShipsByCord(IShip ship)
+        {
+            var a = Convert.ToInt32(Console.ReadLine())-1;
+            var ab = Convert.ToInt32(Console.ReadLine())-1;
+            TryMoveShipTo(ship, new Point(a, ab));
+
+
         }
         private void MoveShips(IShip ship)
         {

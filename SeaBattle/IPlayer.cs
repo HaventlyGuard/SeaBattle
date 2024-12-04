@@ -8,7 +8,7 @@ namespace SeaBattle
 {
     public interface IPlayer
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public IEnumerable<IShip> Ships { get; set; }
         public IEnumerable<IEnumerable<ICell>> FillField(IEnumerable<IEnumerable<ICell>> field);
         public IEnumerable<IEnumerable<ICell>> AttackOpponent(IEnumerable<IEnumerable<ICell>> field);
