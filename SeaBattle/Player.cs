@@ -66,6 +66,8 @@ namespace SeaBattle
                 }
             }
         }
+
+        
         private void PutShipToField(IShip ship)
         {
             for (var i = 0; i < ship.Size; i++)
